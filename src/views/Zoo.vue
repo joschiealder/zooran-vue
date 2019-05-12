@@ -1,6 +1,5 @@
 <template>
   <div class="zoo">
-    <h1>Welcome to ZORANS ZOO </h1>
     <Zoogelaende></Zoogelaende>
   </div>
 </template>
@@ -17,3 +16,14 @@ export default {
 }
 
 </script>
+
+<style>
+.zoo {
+  background-color: #ffffff;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  overflow: scroll;
+}
+</style>

@@ -11,5 +11,12 @@ export default {
 </script>
 
 <style>
-
+.admin {
+  background-color: #ffffff;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  overflow: scroll;
+}
 </style>

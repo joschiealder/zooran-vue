@@ -9,34 +9,43 @@
       <p>Vorame: {{vorname}}</p>
       <p>Nachname: {{nachname}}</p>
       -->
-      <p>Name: {{vorname}}</p>
-      <p>Art: {{art}}</p>
-      <p>Alter: {{alter}}</p>
-      <p> Futter: {{futter}}</p>
+      <p>Name: {{fullname}}</p>
+      <p>Art: {{type}}</p>
+      <p>Alter: {{age}}</p>
+      <p>Futter: {{animalFood}}</p>
     </div>
   </div>
 </template>
 
 <script>
 import strauss from '../assets/images/strauß.png'
+import { db } from '@/api/firebase.js'
 
 export default {
   name: 'Tier',
+  props: ['name', 'age', 'food', 'lastname', 'type'],
   data () {
     return {
-      vorname: 'Svenjay',
-      nachname: 'Straussiansen',
-      art: 'Strauss',
-      alter: 5,
-      futter: 'Bier',
-      img: strauss
+      animalFood: 'Loading...',
+      img: strauss,
       // img: 'http://view.stern.de/de/picture/4049001/portrait-tier-vogel-lachen-lustig-strauss-augenblicke-1920.jpg'
     }
   },
   computed: {
     fullname: function () {
-      return this.vorname + ' ' + this.nachname
+      return this.name + ' ' + this.lastname
     }
+  },
+  mounted () {
+    // Resolve Futter reference
+    db.collection("Futter").doc(this.food.id).get()
+    .then((snapshot) => {
+      this.animalFood = snapshot.data().name
+      this.$emit('loaded')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   }
 }
 </script>
@@ -45,7 +54,7 @@ export default {
 .tier {
   background-color: dimgrey;
   width: 220px;
-  height: 100px;
+  min-height: 100px;
   display: inline-grid;
   grid-column-gap: 5px;
   margin: 5px;

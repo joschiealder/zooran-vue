@@ -1,22 +1,51 @@
 <template>
   <div class="gehege">
     <div class="gehegetiere">
-      <Tier></Tier>
-      <Tier></Tier>
-      <Tier></Tier>
+      <Tier v-for="animal in allAnimals" :name="animal.name" :age="animal.age" :food="animal.food" :lastname="animal.lastname" :type="animal.type" @loaded="loaded()"></Tier>
     </div>
     <div class="gehegebanner">
-      <h3>Gehege</h3>
+      <span>{{name}}</span>
+      <span>({{amount}}/{{maxSize}})</span>
     </div>
   </div>
 </template>
 
 <script>
 import Tier from './Tier'
+import { db } from '@/api/firebase.js'
+
 export default {
   name: 'Gehege',
+  props: ['name', 'maxSize', 'animals'],
   components: {
     Tier
+  },
+  data () {
+    return {
+      allAnimals: [],
+      amount: 0
+    }
+  },
+  methods: {
+    loaded: function() {
+      this.$emit('loaded')
+    }
+  },
+  mounted () {
+    // Resolve Tiere reference
+    this.animals.forEach((doc) => {
+      const data = doc.path
+      db.collection("Tiere").doc(doc.id).get()
+      .then((snapshot) => {
+        this.allAnimals.push(snapshot.data())
+      })
+      .then(() => {
+        this.amount = this.allAnimals.length
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    })
   }
 }
 </script>
@@ -48,9 +77,20 @@ export default {
   height: 35px;
   position: relative;
   top: 45px;
+
 }
 
-.gehegebanner h3 {
-  padding-top: 5px;
+.gehegebanner span:first-child{
+  position: relative;
+  top: 7px;
+  font-size: large;
+  padding: 5px;
+}
+
+.gehegebanner span:nth-child(2){
+  position: relative;
+  top: 6px;
+  font-size: small;
+  padding: 5px;
 }
 </style>

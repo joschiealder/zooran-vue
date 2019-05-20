@@ -1,8 +1,6 @@
 <template>
-  <div class="gehege">
-    <div class="gehegetiere">
-      <Quokka name="Quentin"></Quokka>
-    </div>
+  <div class="quokkagehege">
+    <Quokka :name="'Quentin'"></Quokka>
     <div class="gehegebanner">
       <h3>Quokkas</h3>
     </div>
@@ -44,13 +42,13 @@
 </script>
 
 <style>
-.gehege {
+  .quokkagehege {
   margin: 5px 10px 40px 10px;
   padding: 10px;
   border: 3px solid #696969;
   width: 500px;
   height: auto;
-  background-color: #6E9B34;
+    background-color: lightpink;
 }
 
 .gehegetiere {

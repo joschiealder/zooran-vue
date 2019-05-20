@@ -14,18 +14,12 @@
 
   export default {
   name: 'Quokka',
-  props () {
-    'name'
+    props: {
+      'name': String
   },
   data () {
     return {
-      vorname: 'Svenjay',
-      nachname: 'Straussiansen',
-      art: 'Strauss',
-      alter: 5,
-      futter: 'Bier',
       img: quokka
-      // img: 'http://view.stern.de/de/picture/4049001/portrait-tier-vogel-lachen-lustig-strauss-augenblicke-1920.jpg'
     }
   }
 }

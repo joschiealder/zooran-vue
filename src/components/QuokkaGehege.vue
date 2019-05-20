@@ -1,6 +1,8 @@
 <template>
   <div class="quokkagehege">
-    <Quokka :name="'Quentin'"></Quokka>
+    <div class="gehegetiere">
+      <Quokka v-bind:key="quokka.id" :name="quokka.name" v-for="quokka in quokkas"></Quokka>
+    </div>
     <div class="gehegebanner">
       <h3>Quokkas</h3>
     </div>

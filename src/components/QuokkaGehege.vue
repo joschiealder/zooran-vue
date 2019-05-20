@@ -1,23 +1,44 @@
 <template>
   <div class="gehege">
     <div class="gehegetiere">
-      <Tier></Tier>
-      <Tier></Tier>
-      <Tier></Tier>
+      <Quokka name="Quentin"></Quokka>
     </div>
     <div class="gehegebanner">
-      <h3>Gehege</h3>
+      <h3>Quokkas</h3>
     </div>
   </div>
 </template>
 
 <script>
-  import Tier from './Tier'
+  import Quokka from './Quokka';
 
   export default {
-  name: 'Gehege',
+  name: 'QuokkaGehege',
+  data: function () {
+    return {
+      quokkas: [
+        {
+          id: 0,
+          name: 'Quentin'
+        },
+        {
+          id: 1,
+          name: 'Quinn'
+        },
+        {
+          id: 2,
+          name: 'Quirin'
+        },
+        {
+          id: 3,
+          name: 'Quincy'
+        }
+      ]
+    }
+  },
+
   components: {
-    Tier
+    Quokka
   }
 }
 </script>

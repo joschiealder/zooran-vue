@@ -7,15 +7,19 @@
       <Gehege></Gehege>
       <Gehege></Gehege>
       <Gehege></Gehege>
+      <QuokkaGehege></QuokkaGehege>
     </div>
   </div>
 </template>
 
 <script>
-import Gehege from './Gehege'
-export default {
+  import Gehege from './Gehege'
+  import QuokkaGehege from './QuokkaGehege'
+
+  export default {
   name: 'Zoogelaende',
   components: {
+    QuokkaGehege,
     Gehege
   }
 }

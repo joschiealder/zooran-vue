@@ -1,8 +1,7 @@
 <template>
   <div class="quokkagehege">
     <div class="gehegetiere">
-      <div v-bind:key="quokka.id" v-for="quokka in quokkas"
-        v-on:click="remove(quokka.id)">
+      <div v-bind:key="quokka.id" v-for="quokka in quokkas">
           <Quokka  :name="quokka.name"
                    :sex="quokka.sex"
           ></Quokka>

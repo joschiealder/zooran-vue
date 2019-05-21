@@ -19,19 +19,23 @@
       quokkas: [
         {
           id: 0,
-          name: 'Quentin'
+          name: 'Quentin',
+          sex: 'male'
         },
         {
           id: 1,
-          name: 'Quinn'
+          name: 'Quinn',
+          sex: 'male'
         },
         {
           id: 2,
-          name: 'Quirin'
+          name: 'Quirin',
+          sex: 'male'
         },
         {
           id: 3,
-          name: 'Quincy'
+          name: 'Quincy',
+          sex: 'female'
         }
       ]
     }

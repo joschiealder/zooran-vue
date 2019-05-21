@@ -1,12 +1,12 @@
 <template>
   <div class="quokkagehege">
     <div class="gehegetiere">
-      <template v-for="quokka in quokkas">
-        <Quokka v-bind:key="quokka.id"
-                 :name="quokka.name"
-                 :sex="quokka.sex"
-        ></Quokka>
-      </template>
+      <div v-bind:key="quokka.id" v-for="quokka in quokkas"
+        v-on:click="remove(quokka.id)">
+          <Quokka  :name="quokka.name"
+                   :sex="quokka.sex"
+          ></Quokka>
+      </div>
     </div>
     <div class="gehegebanner">
       <h3>Quokkas</h3>
@@ -45,7 +45,15 @@ export default {
       ]
     }
   },
-
+  methods: {
+    remove: function (id) {
+      for (let i = 0; i < this.quokkas.length; i++) {
+        if (this.quokkas[i].id === id) {
+          this.quokkas.splice(i, 1)
+        }
+      }
+    }
+  },
   components: {
     Quokka
   }

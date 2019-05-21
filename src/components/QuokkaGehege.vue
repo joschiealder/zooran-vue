@@ -2,7 +2,11 @@
   <div class="quokkagehege">
     <div class="gehegetiere">
       <template v-for="quokka in quokkas">
-        <Quokka v-bind:key="quokka.id" :name="quokka.name"></Quokka>
+        <Quokka  v-if="quokka.sex === 'female'"
+                 v-bind:key="quokka.id"
+                 :name="quokka.name"
+                 :sex="quokka.sex"
+        ></Quokka>
       </template>
     </div>
     <div class="gehegebanner">

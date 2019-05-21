@@ -5,17 +5,19 @@
     </div>
     <div class="tierinfo">
       <p>Name: {{name}}</p>
+      <p>Geschlecht: {{sex === 'female' ? 'weiblich' : 'männlich'}}</p>
     </div>
   </div>
 </template>
 
 <script>
-  import quokka from '../assets/images/quokka.png'
+import quokka from '../assets/images/quokka.png'
 
-  export default {
+export default {
   name: 'Quokka',
-    props: {
-      'name': String
+  props: {
+    'name': String,
+    'sex': String
   },
   data () {
     return {

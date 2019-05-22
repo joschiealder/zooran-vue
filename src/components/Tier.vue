@@ -1,12 +1,14 @@
 <template>
   <div class="tier">
+    <div class="tierimage">
+      <!-- TODO: Erstelle ein img tag und zeige das Bild mit Hilfe ovn Attribut Binding an -->
+    </div>
     <div class="tierinfo">
       <p>Art: {{art}}</p>
       <p>Vorname: {{vorname.toUpperCase()}}</p>
       <p>Nachname: {{nachname}}</p>
       <p>Alter: {{alter}}</p>
       <p>Futter: {{futter}}</p>
-      <!-- TODO: Erstelle ein img tag und zeige das Bild mit Hilfe ovn Attribut Binding an -->
     </div>
   </div>
 </template>

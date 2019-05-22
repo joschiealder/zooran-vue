@@ -27,8 +27,8 @@ export default {
       alter: 5,
       img: straussImg
     }
-    // TODO: erstelle ein computed property "fullname"
   }
+  // TODO: erstelle ein computed property "fullname"
 }
 </script>
 

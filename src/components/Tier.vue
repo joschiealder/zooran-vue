@@ -1,11 +1,12 @@
 <template>
   <div class="tier">
-
+<!-- TODO: zeige die Daten im Template an -->
     <div class="tierinfo">
       <p>Art:</p>
       <p>Vorame: </p>
       <p>Nachname: </p>
       <p>Alter:</p>
+      <p>Futter: </p>
     </div>
   </div>
 </template>
@@ -13,7 +14,16 @@
 <script>
 
 export default {
-  name: 'Tier'
+  name: 'Tier',
+  data () {
+    return {
+      art: 'Strauss',
+      futter: 'Straustern',
+      vorname: 'Straussine',
+      nachname: 'Straussiansen',
+      alter: 5
+    }
+  }
 }
 </script>
 
@@ -21,7 +31,7 @@ export default {
 .tier {
   background-color: dimgrey;
   width: 220px;
-  height: 100px;
+  height: 130px;
   display: inline-grid;
   grid-column-gap: 5px;
   margin: 5px;

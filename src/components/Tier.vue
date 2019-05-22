@@ -4,8 +4,7 @@
       <img :src="img" alt="">
     </div>
     <div class="tierinfo">
-      <!-- TODO: Zeige den vollen Namen des Strauss an -->
-      <p></p>
+      <p>{{fullname}}</p>
       <p>Art: {{art}}</p>
       <p>Alter: {{alter}}</p>
       <p>Futter: {{futter}}</p>
@@ -27,8 +26,12 @@ export default {
       alter: 5,
       img: straussImg
     }
+  },
+  computed: {
+    fullname: function () {
+      return this.vorname + ' ' + this.nachname
+    }
   }
-  // TODO: erstelle ein computed property "fullname"
 }
 </script>
 

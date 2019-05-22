@@ -3,7 +3,7 @@
 
     <div class="tierinfo">
       <p>Art:</p>
-      <p>Vorame: </p>
+      <p>Vorname: </p>
       <p>Nachname: </p>
       <p>Alter:</p>
     </div>

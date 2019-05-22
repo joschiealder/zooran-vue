@@ -2,7 +2,7 @@
   <div class="tier">
     <div class="tierinfo">
       <p>Art: {{art}}</p>
-      <p>Vorame: {{vorname.toUpperCase()}}</p>
+      <p>Vorname: {{vorname.toUpperCase()}}</p>
       <p>Nachname: {{nachname}}</p>
       <p>Alter: {{alter}}</p>
       <p>Futter: {{futter}}</p>

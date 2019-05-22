@@ -6,7 +6,7 @@
       <Tier></Tier>
     </div>
     <div class="gehegebanner">
-      <h3>Gehege</h3>
+      <h3>Gehege Strauss</h3>
     </div>
   </div>
 </template>

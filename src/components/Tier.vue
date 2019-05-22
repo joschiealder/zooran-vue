@@ -1,43 +1,20 @@
 <template>
   <div class="tier">
-    <div class="tierimage">
-      <img :src="img"/>
-    </div>
+
     <div class="tierinfo">
-      <!--
-      <p> {{fullname}}</p>
-      <p>Vorame: {{vorname}}</p>
-      <p>Nachname: {{nachname}}</p>
-      -->
-      <p>Name: {{vorname}}</p>
-      <p>Art: {{art}}</p>
-      <p>Alter: {{alter}}</p>
-      <p> Futter: {{futter}}</p>
+      <p>Art:</p>
+      <p>Vorame: </p>
+      <p>Nachname: </p>
+      <p>Alter:</p>
     </div>
   </div>
 </template>
 
 <script>
-import strauss from '../assets/images/strauß.png'
+// TODO: erstelle ein data Objekt, das vorname, nachname und alter enthält
 
 export default {
-  name: 'Tier',
-  data () {
-    return {
-      vorname: 'Svenjay',
-      nachname: 'Straussiansen',
-      art: 'Strauss',
-      alter: 5,
-      futter: 'Bier',
-      img: strauss
-      // img: 'http://view.stern.de/de/picture/4049001/portrait-tier-vogel-lachen-lustig-strauss-augenblicke-1920.jpg'
-    }
-  },
-  computed: {
-    fullname: function () {
-      return this.vorname + ' ' + this.nachname
-    }
-  }
+  name: 'Tier'
 }
 </script>
 

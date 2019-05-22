@@ -2,7 +2,7 @@
   <div class="tier">
     <div class="tierinfo">
       <p>Art: {{art}}</p>
-      <p>Vorame: {{vorname}}</p>
+      <p>Vorname: {{vorname}}</p>
       <p>Nachname: {{nachname}}</p>
       <p>Alter: {{alter}}</p>
       <p>Futter: {{futter}}</p>

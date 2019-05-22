@@ -3,7 +3,7 @@
 <!-- TODO: zeige die Daten im Template an -->
     <div class="tierinfo">
       <p>Art:</p>
-      <p>Vorame: </p>
+      <p>Vorname: </p>
       <p>Nachname: </p>
       <p>Alter:</p>
       <p>Futter: </p>

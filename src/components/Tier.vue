@@ -1,12 +1,11 @@
 <template>
   <div class="tier">
-<!-- TODO: zeige die Daten im Template an -->
     <div class="tierinfo">
-      <p>Art:</p>
-      <p>Vorame: </p>
-      <p>Nachname: </p>
-      <p>Alter:</p>
-      <p>Futter: </p>
+      <p>Art: {{art}}</p>
+      <p>Vorame: {{vorname}}</p>
+      <p>Nachname: {{nachname}}</p>
+      <p>Alter: {{alter}}</p>
+      <p>Futter: {{futter}}</p>
     </div>
   </div>
 </template>

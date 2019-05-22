@@ -2,6 +2,7 @@
   <div class="tier">
     <div class="tierinfo">
       <p>Art: {{art}}</p>
+      <!-- TODO: zeige den Vornamen in Großbuchstaben an -->
       <p>Vorame: {{vorname}}</p>
       <p>Nachname: {{nachname}}</p>
       <p>Alter: {{alter}}</p>

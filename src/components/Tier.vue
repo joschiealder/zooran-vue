@@ -13,7 +13,14 @@
 <script>
 
 export default {
-  name: 'Tier'
+  name: 'Tier',
+  data () {
+    return {
+      vorname: 'Straussine',
+      nachname: 'Straussiansen',
+      alter: 5
+    }
+  }
 }
 </script>
 

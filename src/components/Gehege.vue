@@ -2,8 +2,6 @@
   <div class="gehege">
     <div class="gehegetiere">
       <Tier></Tier>
-      <Tier></Tier>
-      <Tier></Tier>
     </div>
     <div class="gehegebanner">
       <h3>Gehege Strauss</h3>

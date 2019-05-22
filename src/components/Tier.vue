@@ -11,7 +11,6 @@
 </template>
 
 <script>
-// TODO: erstelle ein data Objekt, das vorname, nachname und alter enthält
 
 export default {
   name: 'Tier'

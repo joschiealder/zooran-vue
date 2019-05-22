@@ -5,8 +5,6 @@
     </div>
     <div class="zoogehege">
       <Gehege></Gehege>
-      <Gehege></Gehege>
-      <Gehege></Gehege>
     </div>
   </div>
 </template>

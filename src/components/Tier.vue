@@ -6,11 +6,13 @@
       <p>Nachname: {{nachname}}</p>
       <p>Alter: {{alter}}</p>
       <p>Futter: {{futter}}</p>
+      <!-- TODO: Erstelle ein img tag und zeige das Bild mit Hilfe ovn Attribut Binding an -->
     </div>
   </div>
 </template>
 
 <script>
+import straussImg from '../assets/images/strauß.png'
 
 export default {
   name: 'Tier',
@@ -20,7 +22,8 @@ export default {
       futter: 'Straustern',
       vorname: 'Straussine',
       nachname: 'Straussiansen',
-      alter: 5
+      alter: 5,
+      img: straussImg
     }
   }
 }

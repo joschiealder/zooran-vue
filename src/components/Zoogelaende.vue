@@ -4,23 +4,18 @@
       <h2>ZOO</h2>
     </div>
     <div class="zoogehege">
-      <Gehege></Gehege>
-      <Gehege></Gehege>
-      <Gehege></Gehege>
       <QuokkaGehege></QuokkaGehege>
     </div>
   </div>
 </template>
 
 <script>
-  import Gehege from './Gehege'
-  import QuokkaGehege from './QuokkaGehege'
+import QuokkaGehege from './QuokkaGehege'
 
-  export default {
+export default {
   name: 'Zoogelaende',
   components: {
-    QuokkaGehege,
-    Gehege
+    QuokkaGehege
   }
 }
 </script>

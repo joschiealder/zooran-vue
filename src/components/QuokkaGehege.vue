@@ -81,6 +81,7 @@ export default {
     padding: 10px;
     border: 3px solid #696969;
     width: 500px;
+    width: 700px;
     height: auto;
     background-color: lightpink;
   }

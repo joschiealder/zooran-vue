@@ -1,15 +1,17 @@
 <template>
   <div class="quokkagehege">
     <div class="gehegetiere">
-      <div v-bind:key="quokka.id" v-for="quokka in quokkas"
-        v-on:click="remove(quokka.id)">
-          <Quokka  :name="quokka.name"
-                   :sex="quokka.sex"
-          ></Quokka>
+      <div v-bind:key="quokka.id" v-for="quokka in quokkas">
+          <Quokka family="Känguru" :name="quokka.name"
+                   :info="quokka.info"
+                    v-on:set-main-quokka="mainQuokka = $event"
+          >
+            <h4>{{quokka.info.description}}</h4>
+          </Quokka>
       </div>
     </div>
     <div class="gehegebanner">
-      <h3>Quokkas</h3>
+      <h3>Quokkas - Anführer: {{mainQuokka}}</h3>
     </div>
   </div>
 </template>
@@ -21,26 +23,39 @@ export default {
   name: 'QuokkaGehege',
   data: function () {
     return {
+      mainQuokka: '',
       quokkas: [
         {
           id: 0,
           name: 'Quentin',
-          sex: 'male'
+          info: {
+            sex: 'male',
+            description: 'lorem ipsum'
+          }
         },
         {
           id: 1,
           name: 'Quinn',
-          sex: 'male'
+          info: {
+            sex: 'male',
+            description: 'dolor sit'
+          }
         },
         {
           id: 2,
           name: 'Quirin',
-          sex: 'male'
+          info: {
+            sex: 'male',
+            description: 'amet'
+          }
         },
         {
           id: 3,
           name: 'Quincy',
-          sex: 'female'
+          info: {
+            sex: 'male',
+            description: 'leider verstorben :('
+          }
         }
       ]
     }
@@ -56,24 +71,6 @@ export default {
   },
   components: {
     Quokka
-  },
-  beforeCreate () {
-    alert('beforeCreate')
-  },
-  created () {
-    alert('created')
-  },
-  beforeMount () {
-    alert('beforeMount')
-  },
-  mounted () {
-    alert('mounted')
-  },
-  beforeUpdate () {
-    alert('beforeUpdate')
-  },
-  updated () {
-    alert('updated')
   }
 }
 </script>
@@ -101,7 +98,7 @@ export default {
     color: #ffffff;
     border-radius: 0 0 10px 10px;
     margin: auto;
-    width: 150px;
+    width: 350px;
     height: 35px;
     position: relative;
     top: 45px;

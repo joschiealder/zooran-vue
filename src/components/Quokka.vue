@@ -5,7 +5,10 @@
     </div>
     <div class="tierinfo">
       <p>Name: {{name}}</p>
-      <p>Geschlecht: {{sex === 'female' ? 'weiblich' : 'männlich'}}</p>
+      <p>Familie: {{family}}</p>
+      <p>Geschlecht: {{info.sex === 'female' ? 'weiblich' : 'männlich'}}</p>
+      <slot></slot>
+      <button v-on:click="($emit('set-main-quokka', name))">als Anführer bestimmen</button>
     </div>
   </div>
 </template>
@@ -16,8 +19,9 @@ import quokka from '../assets/images/quokka.png'
 export default {
   name: 'Quokka',
   props: {
+    'family': String,
     'name': String,
-    'sex': String
+    info: { sex: String }
   },
   data () {
     return {
@@ -30,8 +34,8 @@ export default {
 <style scoped>
 .tier {
   background-color: dimgrey;
-  width: 220px;
-  height: 100px;
+  width: 280px;
+  height: 170px;
   display: inline-grid;
   grid-column-gap: 5px;
   margin: 5px;

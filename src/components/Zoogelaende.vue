@@ -44,16 +44,16 @@ export default {
     }
   },
   mounted () {
-    // Get all Gehege from collection
-    db.collection("Gehege").get()
-    .then((snapshot) => {
-      snapshot.forEach((doc) => {
-        this.alleGehege.push(doc.data())
-      })
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+    // TODO: Beziehe die Gehege aus dem Cloud Firestore (Datenbank)
+    // ???????????????????????
+    // .then((snapshot) => {
+    //   snapshot.forEach((doc) => {
+    //     this.alleGehege.push(????????????)
+    //   })
+    // })
+    // .catch((error) => {
+    //   console.log(error)
+    // })
   }
 }
 </script>

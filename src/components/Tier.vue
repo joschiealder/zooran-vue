@@ -1,7 +1,7 @@
 <template>
   <div class="tier">
     <div class="tierimage">
-      <img :src="img"/>
+      <img id="animalImage" :src="imgUrl"/>
     </div>
     <div class="tierinfo">
       <!--
@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import strauss from '../assets/images/strauß.png'
-import { db } from '@/api/firebase.js'
+import { db, storage } from '@/api/firebase.js'
+import placeholderImg from '../assets/images/nophoto.jpg'
 
 export default {
   name: 'Tier',
@@ -27,8 +27,7 @@ export default {
   data () {
     return {
       animalFood: 'Loading...',
-      img: strauss,
-      // img: 'http://view.stern.de/de/picture/4049001/portrait-tier-vogel-lachen-lustig-strauss-augenblicke-1920.jpg'
+      imgUrl: placeholderImg,
     }
   },
   computed: {
@@ -37,15 +36,32 @@ export default {
     }
   },
   mounted () {
-    // Resolve Futter reference
-    db.collection("Futter").doc(this.food.id).get()
-    .then((snapshot) => {
-      this.animalFood = snapshot.data().name
-      this.$emit('loaded')
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+    this.getFoods()
+    this.getImages()
+  },
+  methods: {
+
+    // TODO: Schreibe die Funktion, um Bilder dynamisch aus dem Cloud Storage zu laden
+    getImages: function () {
+      // let animalType = this.type.toLowerCase()
+      // ?????????????????????????????????????????????????????????
+      // .then((url) => {
+      //   ?????????????????????
+      // }).catch(function(error) {
+      //   console.log(error)
+      // })
+    },
+
+    getFoods: function () {
+      db.collection("Futter").doc(this.food.id).get()
+      .then((snapshot) => {
+        this.animalFood = snapshot.data().name
+        this.$emit('loaded')
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    }
   }
 }
 </script>

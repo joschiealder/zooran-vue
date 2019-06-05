@@ -45,15 +45,15 @@ export default {
   },
   mounted () {
     // TODO: Beziehe die Gehege aus dem Cloud Firestore (Datenbank)
-    // ???????????????????????
-    // .then((snapshot) => {
-    //   snapshot.forEach((doc) => {
-    //     this.alleGehege.push(????????????)
-    //   })
-    // })
-    // .catch((error) => {
-    //   console.log(error)
-    // })
+    db.collection("Gehege").get()
+    .then((snapshot) => {
+      snapshot.forEach((doc) => {
+        this.alleGehege.push(doc.data())
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   }
 }
 </script>

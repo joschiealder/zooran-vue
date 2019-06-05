@@ -5,7 +5,7 @@
 
       <div class="animal">
         <label for="name">Tier auswählen: </label>
-        <select id="animal" v-model="animal">
+        <select id="animal">
           <option>Quokka</option>
           <option>Dromedar</option>
           <option>Strauss</option>
@@ -14,17 +14,15 @@
       <br/>
       <div class="name">
         <label for="name">Name: </label>
-        <input type="text" placeholder="Name" id="name" v-model="name">
+        <input type="text" placeholder="Name" id="name">
       </div>
 
       <div class="radio">
-        <input type="radio" value="male" id="male" v-model="sex"/>
+        <input type="radio" value="male" id="male"/>
         <label for="male">Männlich</label>
-        <input type="radio" value="female" id="female" v-model="sex"/>
+        <input type="radio" value="female" id="female"/>
         <label for="female">weiblich</label>
       </div>
-
-      <button v-on:click="add">hinzufügen</button>
 
     </div>
 
@@ -43,7 +41,7 @@ export default {
   },
   methods: {
     add: function (event) {
-      alert(this.animal + ', ' + this.name + ', ' + this.sex + ' wurde erstellt. :)')
+      alert('TODO' + ' wurde erstellt. :)')
     }
   }
 }

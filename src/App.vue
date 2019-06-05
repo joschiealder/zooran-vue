@@ -2,8 +2,9 @@
   <div id="app" class="app">
 
     <div id="nav">
-      <router-link to="/">ZORANS ZOO</router-link>
-      <router-link to="/admin">ADMIN</router-link>
+      <!-- TODO: verändere die Links so, dass sie die entsprechenden Views aufrufen -->
+      <a>ZORANS ZOO</a>
+      <a>ADMIN</a>
     </div>
 
     <router-view/>

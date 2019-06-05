@@ -7,7 +7,6 @@
       <p>Name: {{name}}</p>
       <p>Familie: {{family}}</p>
       <p>Geschlecht: {{info.sex === 'female' ? 'weiblich' : 'männlich'}}</p>
-      <slot></slot>
       <button v-on:click="($emit('set-main-quokka', name))">als Anführer bestimmen</button>
     </div>
   </div>

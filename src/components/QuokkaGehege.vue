@@ -2,11 +2,7 @@
   <div class="quokkagehege">
     <div class="gehegetiere">
       <div v-bind:key="quokka.id" v-for="quokka in quokkas">
-          <Quokka family="Känguru" :name="quokka.name"
-                   :info="quokka.info"
-                    v-on:set-main-quokka="mainQuokka = $event"
-          >
-            <h4>{{quokka.info.description}}</h4>
+          <Quokka>
           </Quokka>
       </div>
     </div>
@@ -71,7 +67,6 @@ export default {
     margin: 5px 10px 40px 10px;
     padding: 10px;
     border: 3px solid #696969;
-    width: 500px;
     width: 700px;
     height: auto;
     background-color: lightpink;

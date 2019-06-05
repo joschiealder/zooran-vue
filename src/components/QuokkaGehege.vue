@@ -60,15 +60,6 @@ export default {
       ]
     }
   },
-  methods: {
-    remove: function (id) {
-      for (let i = 0; i < this.quokkas.length; i++) {
-        if (this.quokkas[i].id === id) {
-          this.quokkas.splice(i, 1)
-        }
-      }
-    }
-  },
   components: {
     Quokka
   }

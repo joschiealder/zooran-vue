@@ -20,7 +20,7 @@ export default {
     addQuokka () {
       let id = this.$store.state.quokkas.length
       let quokka = { id, name: this.name }
-      // TODO: c) Rufe die Mutation "addQuokka" auf und übergebe ihr das quokka Objekt
+      this.$store.commit('addQuokka', quokka)
     }
   }
 }

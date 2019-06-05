@@ -14,7 +14,11 @@ import Quokka from './Quokka'
 
 export default {
   name: 'QuokkaGehege',
-  // TODO: a) Lade die quokkas aus dem store über ein computed property
+  computed: {
+    quokkas () {
+      return this.$store.state.quokkas
+    }
+  },
   components: {
     Quokka
   }

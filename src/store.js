@@ -25,9 +25,10 @@ export default new Vuex.Store({
     ]
 
   },
-  // TODO: b) Schreibe eine mutation "addQuokka" die den state, und ein quokka übergeben bekommt und das quokka dem quokkas array des states hinzufügt (Array.push())
   mutations: {
-
+    addQuokka (state, quokka) {
+      state.quokkas.push(quokka)
+    }
   },
   actions: {
 

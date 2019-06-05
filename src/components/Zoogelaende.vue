@@ -18,7 +18,7 @@
       </div>
     </div>
     <div :class="{'loading' : loading, 'zoogehege' : !loading }">
-      <Gehege v-for="gehege in alleGehege" :name="gehege.name" :maxSize="gehege.maxSize" :animals="gehege.animals" @loaded="loaded()"></Gehege>
+      <Gehege v-for="gehege in alleGehege" :key="gehege.id" :name="gehege.name" :maxSize="gehege.maxSize" :animals="gehege.animals" @loaded="loaded()"></Gehege>
     </div>
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
     }
   },
   mounted () {
-    // Get all Gehege from collection
+    // TODO: Beziehe alle Gehege aus dem Cloud Firestore (Datenbank)
     db.collection("Gehege").get()
     .then((snapshot) => {
       snapshot.forEach((doc) => {

@@ -10,33 +10,11 @@
 </template>
 
 <script>
-  import Quokka from './Quokka';
+import Quokka from './Quokka'
 
-  export default {
+export default {
   name: 'QuokkaGehege',
-  data: function () {
-    return {
-      quokkas: [
-        {
-          id: 0,
-          name: 'Quentin'
-        },
-        {
-          id: 1,
-          name: 'Quinn'
-        },
-        {
-          id: 2,
-          name: 'Quirin'
-        },
-        {
-          id: 3,
-          name: 'Quincy'
-        }
-      ]
-    }
-  },
-
+  // TODO: a) Lade die quokkas aus dem store über ein computed property
   components: {
     Quokka
   }

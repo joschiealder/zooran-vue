@@ -10,12 +10,12 @@
 </template>
 
 <script>
-  import quokka from '../assets/images/quokka.png'
+import quokka from '../assets/images/quokka.png'
 
-  export default {
+export default {
   name: 'Quokka',
-    props: {
-      'name': String
+  props: {
+    'name': String
   },
   data () {
     return {
